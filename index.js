@@ -72,7 +72,7 @@ function onDrop(e) {
         // nothing to change
         leftScoreCount = leftScoreCount;
       } else {
-        // if below to handle situation when we moved from one goal straight to another
+        // if below to handle situation when we moved from the left goal straight to right
         if (mapHeaderRight.has(currEl)) {
           rightGoalBody.removeChild(mapHeaderRight.get(currEl));
           mapHeaderRight.delete(currEl);
@@ -94,9 +94,9 @@ function onDrop(e) {
     if (rightScoreCount > 0 || leftScoreCount > 0) {
       // if we're dragging our node from the right goal
       // the if below will handle this case
-      if (mapBodyRight.has(currEl)) {
+      if (mapHeaderRight.has(currEl)) {
         rightScoreCount += -1;
-        rightGoalBody.removeChild(mapBodyRight.get(currEl));
+        rightGoalBody.removeChild(mapHeaderRight.get(currEl));
         mapBodyRight.delete(currEl);
         mapHeaderRight.delete(currEl);
         printScore();
