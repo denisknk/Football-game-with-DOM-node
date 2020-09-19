@@ -42,7 +42,6 @@ function onDrop(e) {
   copy.style.position = "relative";
   copy.style.top = "0";
   copy.style.left = "0";
-  copy.draggable = false;
   // if drop zone is a right or left goal
   if (e.path[0] === rightGoal || e.path[0] === leftGoal) {
     //  if drop zone is a right goal
